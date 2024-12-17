@@ -1,0 +1,8 @@
+library(dplyr)
+library(tidyr)
+library(broom)
+data <- read.csv("food_industry_data.csv")
+# Perform multiple linear regression
+regression_model <- lm(e_logistics ~ logistics_infrastructure + information_technology + human_resource_management + supply_chain_integration + organizational_culture, data = data)
+# Extract regression coefficients and their significance
+coefficients <- tidy(regression_model)
