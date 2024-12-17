@@ -1,0 +1,6 @@
+library(dplyr)
+data <- read.csv("food_industry_data.csv")
+# Perform ANOVA
+anova_model <- aov(e_logistics ~ Organization_Type, data = data)
+# Display the ANOVA summary
+summary(anova_model)
