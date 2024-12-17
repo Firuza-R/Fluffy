@@ -1,0 +1,6 @@
+library(dplyr)
+data <- read.csv("food_industry_data.csv")
+# Calculate the correlation matrix
+correlation_matrix <- cor(data[, c("e_logistics", "logis-tics_infrastructure_food", "information_technology_food", "hu-man_resource_management_food", "organizational_culture_food", "sup-ply_chain_integration_food")])
+# Display the correlation matrix
+print(correlation_matrix)
